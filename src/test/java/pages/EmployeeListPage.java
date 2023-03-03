@@ -10,6 +10,8 @@ public class EmployeeListPage {
     @FindBy(id = "empsearch_employee_name_empName")
     public WebElement employeeNameSearchField;
     @FindBy(id = "searchBtn")
-    public WebElement serachBtn;
+    public WebElement empListSearchButton;
+
+
 
 }
