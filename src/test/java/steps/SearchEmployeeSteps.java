@@ -1,21 +1,27 @@
 package steps;
 
+import base.BaseClass;
 import io.cucumber.java.en.*;
+import pages.LoginPage;
 
-public class SearchEmployeeSteps {
+
+public class SearchEmployeeSteps extends BaseClass {
 
     @Given("user is on the Exelenter homepage")
     public void user_is_on_the_exelenter_homepage() {
+        setUp();
 
     }
 
     @Given("user logs in with valid admin credentials")
     public void user_logs_in_with_valid_admin_credentials() {
+        loginPage.loginToWebsiteViaConfigs("username","password");
 
     }
 
     @Given("user navigates to the employee list page")
     public void user_navigates_to_the_employee_list_page() {
+
 
     }
 
