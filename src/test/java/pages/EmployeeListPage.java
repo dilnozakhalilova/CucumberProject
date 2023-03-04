@@ -1,9 +1,11 @@
 package pages;
 
+import base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class EmployeeListPage {
+public class EmployeeListPage extends BaseClass {
     @FindBy(id = "empsearch_id")
     public WebElement employeeIDSearchField;
 
@@ -12,9 +14,12 @@ public class EmployeeListPage {
     @FindBy(id = "searchBtn")
     public WebElement empListSearchButton;
 
-    public void searchEmployeeById(String empId){
+    public void searchEmployeeById(String empId) {
         employeeIDSearchField.sendKeys(empId);
     }
 
+    public EmployeeListPage() {
+        PageFactory.initElements(driver, this);
+    }
 
 }

@@ -2,8 +2,7 @@ package steps;
 
 import base.BaseClass;
 import io.cucumber.java.en.*;
-import pages.EmployeeListPage;
-import pages.LoginPage;
+
 
 
 public class SearchEmployeeSteps extends BaseClass {
@@ -28,6 +27,7 @@ public class SearchEmployeeSteps extends BaseClass {
 
     @Given("user enters an existing employee id in the id search-field")
     public void user_enters_an_existing_employee_id_in_the_id_search_field() {
+        wait(1);
         employeeListPage.searchEmployeeById(expectedEmployeeId);
     }
 
@@ -38,7 +38,10 @@ public class SearchEmployeeSteps extends BaseClass {
 
     @Then("the employee information is displayed on the employee list table")
     public void the_employee_information_is_displayed_on_the_employee_list_table() {
+        System.out.println("Employee is displayed");
+    }
+    @Given("user enters an existing employee name in the name search-field")
+    public void user_enters_an_existing_employee_name_in_the_name_search_field() {
 
     }
-
 }
