@@ -28,12 +28,12 @@ public class SearchEmployeeSteps extends BaseClass {
 
     @Given("user enters an existing employee id in the id search-field")
     public void user_enters_an_existing_employee_id_in_the_id_search_field() {
-        employeeListPage.searchEmployeeById();
+        employeeListPage.searchEmployeeById(expectedEmployeeId);
     }
 
     @When("user clicks on the search button")
     public void user_clicks_on_the_search_button() {
-
+        click(employeeListPage.empListSearchButton);
     }
 
     @Then("the employee information is displayed on the employee list table")
