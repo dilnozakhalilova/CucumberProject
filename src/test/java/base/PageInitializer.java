@@ -3,7 +3,7 @@ package base;
 import pages.*;
 
 
-public class PageInitializer  {
+public class PageInitializer {
 
     public static LoginPage loginPage;
     public static DashboardPage dashboardPage;
@@ -12,6 +12,8 @@ public class PageInitializer  {
 
     public static PersonalDetailsPage personalDetailsPage;
 
+    public static EmployeeListPage employeeListPage;
+
 
     public static void initialize() {
         loginPage = new LoginPage();
@@ -19,6 +21,6 @@ public class PageInitializer  {
         pimPage = new PIMPage();
         addEmployeePage = new AddEmployeePage();
         personalDetailsPage = new PersonalDetailsPage();
-
+        employeeListPage= new EmployeeListPage();
     }
 }

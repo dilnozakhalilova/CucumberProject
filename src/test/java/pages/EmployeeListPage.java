@@ -12,6 +12,9 @@ public class EmployeeListPage {
     @FindBy(id = "searchBtn")
     public WebElement empListSearchButton;
 
+    public void searchEmployeeById(String empId){
+        employeeIDSearchField.sendKeys(empId);
+    }
 
 
 }

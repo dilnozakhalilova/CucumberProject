@@ -26,7 +26,10 @@ public void navigateToAddEmployee(){
     clickButWaitForClickability(PIM);
     clickButWaitForClickability(addEmployee);
 }
-
+    public void navigateToEmployeeList(){
+        clickButWaitForClickability(PIM);
+        clickButWaitForClickability(employeeList);
+    }
 
 
 
