@@ -14,6 +14,10 @@ public class EmployeeListPage extends BaseClass {
     @FindBy(id = "searchBtn")
     public WebElement empListSearchButton;
 
+    public void searchEmployeeByName(String emplName) {
+        employeeNameSearchField.sendKeys(emplName);
+    }
+
     public void searchEmployeeById(String empId) {
         employeeIDSearchField.sendKeys(empId);
     }

@@ -7,6 +7,7 @@ import io.cucumber.java.en.*;
 
 public class SearchEmployeeSteps extends BaseClass {
     String expectedEmployeeId = "0909";
+    String expectedEmployeeName="Zeynep Demir";
 
     @Given("user is on the Exelenter homepage")
     public void user_is_on_the_exelenter_homepage() {
@@ -42,6 +43,7 @@ public class SearchEmployeeSteps extends BaseClass {
     }
     @Given("user enters an existing employee name in the name search-field")
     public void user_enters_an_existing_employee_name_in_the_name_search_field() {
+        employeeListPage.searchEmployeeByName(expectedEmployeeName);
 
     }
 }
