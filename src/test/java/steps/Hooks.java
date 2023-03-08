@@ -7,7 +7,7 @@ import io.cucumber.java.Before;
 import org.bouncycastle.util.Pack;
 
 public class Hooks {
-    @Before
+    @Before             // Before annotation (from Cucumber, not JUnit) will run before every scenario
     public void startBrowser(){
         BaseClass.setUp();
     }
