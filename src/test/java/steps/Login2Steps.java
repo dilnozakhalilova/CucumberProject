@@ -2,6 +2,7 @@ package steps;
 
 import base.BaseClass;
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 
 public class Login2Steps extends BaseClass {
 
@@ -20,7 +21,9 @@ public class Login2Steps extends BaseClass {
     }
     @Then("admin user logs in successfully")
     public void admin_user_logs_in_successfully() {
-
+        String expectedMessage = "Welcome Admin";
+        String actualMessage = dashboardPage.welcome.getText();
+        Assert.assertEquals("Welcome message is Displayed. Test passed",expectedMessage,actualMessage);
     }
 
     @When("ess user logs in with valid credentials")
