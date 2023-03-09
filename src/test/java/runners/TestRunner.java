@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         monochrome = true, // This will print test result in more human readable format in console
         // tags = "@smoke",      // run(test(s) with provided tag name  // and == &&, or ==||
         // tags = "@testingnow"
-        tags = "@login2"
-
+        //tags = "@login2"
+        tags = "@login"
 
 )
 
