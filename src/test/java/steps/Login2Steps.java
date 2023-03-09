@@ -23,15 +23,19 @@ public class Login2Steps extends BaseClass {
     public void admin_user_logs_in_successfully() {
         String expectedMessage = "Welcome Admin";
         String actualMessage = dashboardPage.welcome.getText();
-        Assert.assertEquals("Welcome message is Displayed. Test passed",expectedMessage,actualMessage);
+        Assert.assertEquals("Welcome Admin message is Displayed. Test passed",expectedMessage,actualMessage);
     }
 
     @When("ess user logs in with valid credentials")
     public void ess_user_logs_in_with_valid_credentials() {
+        loginPage.loginToWebsiteViaConfigs("essUsername","essPassword");
 
     }
     @Then("ess user logs in successfully")
     public void ess_user_logs_in_successfully() {
+String expectedMessage= "Welcome John";
+String actualMessage=dashboardPage.welcome.getText();
+Assert.assertEquals("Welcome John message is Displayed. Test passed",expectedMessage,actualMessage);
 
     }
 
