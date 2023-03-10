@@ -30,12 +30,12 @@ public class LoginSteps extends BaseClass {
 
     @When("user logs in with invalid admin login and empty admin password field")
     public void user_logs_in_with_invalid_admin_login_and_empty_admin_password_field() {
-        loginPage.loginToWebsiteViaConfigs("username1","");
+        loginPage.loginToWebsiteViaConfigs("Admin123","");
 
     }
     @Then("Password cannot be empty message is displayed")
     public void password_cannot_be_empty_message_is_displayed() {
-        Assert.assertEquals("Password cannot be empty",loginPage.loginErrorMessage.getText());
+        Assert.assertEquals("Test failed. Password cannot be empty",loginPage.loginErrorMessage.getText());
     }
 
 

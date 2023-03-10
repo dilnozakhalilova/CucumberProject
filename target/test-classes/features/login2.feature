@@ -28,7 +28,7 @@ Feature: login Test
       | username | password         | message       |
       | Admin    | Exelent2022Sdet! | Welcome Admin |
       | ESSUser  | Ess@2023         | Welcome John  |
-      | ESSUser  | Ess@2023         | Welcome John  |
+
 
 # Similar to DataProvider in TestNG
 
