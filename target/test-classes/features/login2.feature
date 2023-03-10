@@ -20,6 +20,21 @@ Feature: login Test
     Then ess user logs in successfully
 
 
+  Scenario Outline:
+    When user enters a valid "<username>" and a valid "<password>"
+    And user clicks on the log in button
+    Then user logs in successfully a "<message>" is displayed
+    Examples:
+      | username | password         | message       |
+      | Admin    | Exelent2022Sdet! | Welcome Admin |
+      | ESSUser  | Ess@2023         | Welcome John  |
+      | ESSUser  | Ess@2023         | Welcome John  |
+
+# Similar to DataProvider in TestNG
+
+
+
+
 
 
 

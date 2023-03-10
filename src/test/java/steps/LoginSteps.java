@@ -35,7 +35,6 @@ public class LoginSteps extends BaseClass {
     }
     @Then("Password cannot be empty message is displayed")
     public void password_cannot_be_empty_message_is_displayed() {
-
         Assert.assertEquals("Password cannot be empty",loginPage.loginErrorMessage.getText());
     }
 

@@ -41,5 +41,20 @@ public class Login2Steps extends BaseClass {
 
     }
 
+    @When("user enters a valid {string} and a valid {string}")
+    public void user_enters_a_valid_and_a_valid(String username, String password) {
+        loginPage.username.sendKeys(username);
+        loginPage.password.sendKeys(password);
+    }
 
+    @When("user clicks on the log in button")
+    public void user_clicks_on_the_log_in_button() {
+        loginPage.loginBtn.click();
+    }
+
+    @Then("user logs in successfully a {string} is displayed")
+    public void user_logs_in_successfully_a_is_displayed(String expectedMessage) {
+        Assert.assertEquals("User login is NOT successful",expectedMessage,dashboardPage.welcome.getText());
+
+    }
 }
