@@ -19,7 +19,7 @@ public class LoginSteps extends BaseClass {
 
     @When("user is unable to log in using invalid password")
     public void user_is_unable_to_log_in_using_invalid_password() {
-        loginPage.loginToWebsiteViaConfigs("username","invalidPassword");
+        loginPage.loginToWebsite("username","invalidPassword");
 
     }
     @Then("Invalid credentials error message is displayed")
@@ -35,7 +35,7 @@ public class LoginSteps extends BaseClass {
     }
     @Then("Password cannot be empty message is displayed")
     public void password_cannot_be_empty_message_is_displayed() {
-        Assert.assertEquals("Test failed. Password cannot be empty",loginPage.loginErrorMessage.getText());
+        Assert.assertEquals("Test failed. ","Password cannot be empty",loginPage.loginErrorMessage.getText());
     }
 
 
