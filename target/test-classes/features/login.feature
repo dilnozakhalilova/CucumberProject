@@ -5,7 +5,7 @@ Feature: Login test
     When user is able to log in using valid login credentials
     Then user is able to see welcome admin message
 
-  Scenario: Valid Admin login and invalid Admin password
+  Scenario: Valid Admin login and Invalid Admin password
     When user is unable to log in using invalid password
     Then Invalid credentials error message is displayed
 
