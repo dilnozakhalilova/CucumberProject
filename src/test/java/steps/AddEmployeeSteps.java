@@ -14,11 +14,11 @@ public class AddEmployeeSteps extends BaseClass {
 
     }
 
-    @When("user clicks the save button")
-    public void user_clicks_the_save_button() {
-        addEmployeePage.saveBtn.click();
-
-    }
+//    @When("user clicks the save button")
+//    public void user_clicks_the_save_button() {
+//        addEmployeePage.saveBtn.click();
+//
+//    }
 
     @Then("user can see {string} name displayed")
     public void user_can_see_name_displayed(String newEmployeeDetails) {

@@ -1,15 +1,11 @@
 @addEmployeeTest
 Feature: Adding new employees
 
-  Background:
-
-
-
   Scenario Outline:
     Given user logs in with valid admin credentials
-    * user navigates to the addEmployee page
+    And user navigates to the employee list page
     When user inputs valid "<firstName>" and "<lastName>"
-    * user clicks the save button
+    And user clicks the save button
     Then user can see "<new employee>" name displayed
     Examples:
 
