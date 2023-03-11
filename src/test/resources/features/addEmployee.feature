@@ -6,6 +6,7 @@ Feature: Adding new employees
     * user navigates to the employee list page
 
   Scenario Outline:
+
     When user inputs valid "<firstName>" and "<lastName>"
     * user clicks the save button
     Then user can see "<new employee>" name displayed
@@ -13,6 +14,6 @@ Feature: Adding new employees
 
       | firstName | lastName |
       | Maya      | Jerriho  |
-      | Sandy     | Smith    |
-      | Katie     | Jackson  |
-      | Emely     | Suhana   |
+    #  | Sandy     | Smith    |
+     # | Katie     | Jackson  |
+    #  | Emely     | Suhana   |

@@ -11,6 +11,7 @@ public class AddEmployeeSteps extends BaseClass {
     public void user_inputs_valid_and(String firstName, String lastName) {
         addEmployeePage.firstName.sendKeys(firstName);
         addEmployeePage.lastName.sendKeys(lastName);
+
     }
 
     @When("user clicks the save button")
