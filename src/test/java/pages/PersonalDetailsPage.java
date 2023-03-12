@@ -12,7 +12,8 @@ public class PersonalDetailsPage extends BaseClass {
 
     @FindBy(css ="#pdMainContainer h1")
     public WebElement personalDetailsHeader;
-
+    @FindBy(xpath = "//div[@id='profile-pic']/h1")
+    public WebElement employeeFullName;
 
     public PersonalDetailsPage(){
         PageFactory.initElements(driver,this);
