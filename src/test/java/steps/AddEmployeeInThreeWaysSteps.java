@@ -31,4 +31,23 @@ public class AddEmployeeInThreeWaysSteps extends BaseClass {
         Assert.assertEquals("Test failed. New employee was not added without ID" , newEmployee,personalDetailsPage.employeeFullName.getText());
 
     }
+    @When("user clicks on {string}")
+    public void user_clicks_on(String createLoginDetailsButtonBox) {
+        addEmployeePage.CreateLoginDetailsCheckbox.click();
+    }
+    @When("user inputs valid s.moore and {string}")
+    public void user_inputs_valid_s_moore_and(String username, String password  ) {
+
+
+    }
+    @When("user confirms the password in the {string} field and clicks save button")
+    public void user_confirms_the_password_in_the_field_and_clicks_save_button(String string) {
+
+    }
+    @Then("{string} is successfully added with credentials")
+    public void is_successfully_added_with_credentials(String string) {
+
+    }
+
+
 }
