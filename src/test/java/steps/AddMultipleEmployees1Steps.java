@@ -4,7 +4,7 @@ import base.BaseClass;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
-public class addMultipleEmployees1Steps extends BaseClass {
+public class AddMultipleEmployees1Steps extends BaseClass {
 
     @Given("user navigates to the AddEmployee page")
     public void user_navigates_to_the_add_employee_page() {

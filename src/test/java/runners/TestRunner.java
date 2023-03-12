@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
         // tags = "@smoke",      // run(test(s) with provided tag name  // and == &&, or ==||
         // tags = "@testingnow"
         //tags = "@login2"
-        , tags = "@addEmployeeTest"
+        //, tags = "@addEmployeeTest"
+        ,tags="@addingEmployeeInThreeWays"
 
 )
 
