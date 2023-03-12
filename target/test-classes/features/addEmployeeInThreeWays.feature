@@ -22,13 +22,15 @@ Feature: Adding employees in three different ways
 
   Scenario Outline:
     When  user inputs valid "<firstName>" and "<lastName>"
-    And user clicks on "createLoginDetailsButtonBox"
-    And user inputs valid "<username>" and "<password>"
-    And user confirms the password in the "confirm password" field and clicks save button
-    Then "<newEmployee>" is successfully added with <"login">credentials
+    And user clicks on createLoginDetailsButtonBox
+    And admin user inputs valid "<username>" and "<password>"
+    And user re- enters the password in the "<confirmPassword>" field
+    And user clicks save button
+    Then "<newEmployee>" is successfully added with login credentials
     Examples:
-      | firstName | lastName | "username" | password    | newEmployee | "login" |
-      | Sindy     | Moore    | s.moore    | |       Sindy Moore       |         |
+      | firstName | lastName | username | password      | confirmPassword | newEmployee | login   |
+      | Sindy     | Moore    | s.moore  | Fibonachi1358!! |Fibonachi1358!!| Sindy Moore | s.moore |
+
 
 
 

@@ -31,23 +31,28 @@ public class AddEmployeeInThreeWaysSteps extends BaseClass {
         Assert.assertEquals("Test failed. New employee was not added without ID" , newEmployee,personalDetailsPage.employeeFullName.getText());
 
     }
-    @When("user clicks on {string}")
-    public void user_clicks_on(String createLoginDetailsButtonBox) {
+    @And("user clicks on createLoginDetailsButtonBox")
+    public void userClicksOnCreateLoginDetailsButtonBox() {
         addEmployeePage.CreateLoginDetailsCheckbox.click();
     }
-    @When("user inputs valid s.moore and {string}")
-    public void user_inputs_valid_s_moore_and(String username, String password  ) {
-
-
-    }
-    @When("user confirms the password in the {string} field and clicks save button")
-    public void user_confirms_the_password_in_the_field_and_clicks_save_button(String string) {
+    @And("admin user inputs valid {string} and {string}")
+    public void adminUserInputsValidAnd(String userName, String password) {
+        addEmployeePage.userName.sendKeys(userName);
+        addEmployeePage.password.sendKeys(password);
 
     }
-    @Then("{string} is successfully added with credentials")
-    public void is_successfully_added_with_credentials(String string) {
-
+    @And("user re- enters the password in the {string} field")
+    public void userReEntersThePasswordInTheField(String confirmPassword) {
+        addEmployeePage.confirmPassword.sendKeys(confirmPassword);
+    }
+    @And("user clicks save button")
+    public void userUploadsAPhotoAndClicksSaveButton() {
+      addEmployeePage.saveBtn.click();
     }
 
 
+    @Then("{string} is successfully added with login credentials")
+    public void isSuccessfullyAddedWithLoginCredentials(String newEmployee) {
+       Assert.assertEquals("Test failed. New employee was not added using log in credentials",newEmployee, personalDetailsPage.employeeFullName.getText());
+    }
 }
