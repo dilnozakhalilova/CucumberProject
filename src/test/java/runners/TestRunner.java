@@ -12,10 +12,10 @@ import org.junit.runner.RunWith;
         , dryRun = false   // if set to true it will check if all step definitions have implementation. Like headless(without running)
         , monochrome = false // This will print test result in more human readable format in console
         // tags = "@smoke",      // run(test(s) with provided tag name  // and == &&, or ==||
-        // tags = "@testingnow"
+        , tags = "@testingnow"
         //tags = "@login2"
         //, tags = "@addEmployeeTest"
-        ,tags="@addingEmployeeInThreeWays"
+        //,tags="@addingEmployeeInThreeWays"
 
 )
 
