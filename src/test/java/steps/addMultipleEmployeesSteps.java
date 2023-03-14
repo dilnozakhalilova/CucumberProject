@@ -22,7 +22,7 @@ public class addMultipleEmployeesSteps extends BaseClass {
         }
         @Then("new employee {string} is added successfully")
         public void new_employee_is_added_successfully(String fullName) {
-            Assert.assertEquals("Actual and expected names does NOT matches", fullName, personalDetailsPage.employeeFullName.getText());
+            Assert.assertEquals("Employee full name does NOT match. ", fullName, personalDetailsPage.employeeFullName.getText());
         }
     }
 
