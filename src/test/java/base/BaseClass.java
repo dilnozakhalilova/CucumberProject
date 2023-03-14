@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import utils.CommonMethods;
@@ -49,6 +51,17 @@ public class BaseClass extends CommonMethods {
                 } else {
                     driver = new FirefoxDriver();
                 }
+            }
+                case "edge"  -> {
+                    WebDriverManager.edgedriver().setup();
+                    if(headless.equalsIgnoreCase("true")){
+                        EdgeOptions options= new EdgeOptions();
+                        options.addArguments("--headless");
+                        driver = new EdgeDriver(options);
+                    } else {
+                        driver = new EdgeDriver();           // <== if headless=false this line will run
+                    }
+
             }
             default -> throw new RuntimeException("Browser is not supported");
         }
