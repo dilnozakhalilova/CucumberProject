@@ -12,7 +12,7 @@ public class PersonalDetailsPage extends BaseClass {
 
     @FindBy(css ="#pdMainContainer h1")
     public WebElement personalDetailsHeader;
-    @FindBy(xpath = "//div[@id='profile-pic']/h1")
+    @FindBy(xpath = "//div[@id='profile-pic']/h1")//#profile-pic h1
     public WebElement employeeFullName;
 
     public PersonalDetailsPage(){

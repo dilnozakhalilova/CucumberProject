@@ -10,6 +10,7 @@ public class PageInitializer {
     public static PIMPage pimPage;
     public static AddEmployeePage addEmployeePage;
 
+
     public static PersonalDetailsPage personalDetailsPage;
 
     public static EmployeeListPage employeeListPage;
