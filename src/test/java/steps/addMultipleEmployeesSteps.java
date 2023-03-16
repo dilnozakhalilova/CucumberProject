@@ -24,7 +24,9 @@ public class addMultipleEmployeesSteps extends BaseClass {
         public void new_employee_is_added_successfully(String fullName) {
             Assert.assertEquals("Employee full name does NOT match. ", fullName, personalDetailsPage.employeeFullName.getText());
         }
-    }
+
+
+}
 
 
 
