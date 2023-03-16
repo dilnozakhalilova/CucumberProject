@@ -45,7 +45,7 @@ public class addMultipleEmployeesSteps extends BaseClass {
             addEmployeePage.saveBtn.click();
 
             // Assertion/ Validation
-            String expectedFullName = user.get("FirstName") + " " + user.get("MiddleName") + "" + user.get("LastName");
+            String expectedFullName = user.get("FirstName") + " " + user.get("MiddleName") + " " + user.get("LastName");
             String actualFullName = personalDetailsPage.employeeFullName.getText();
             Assert.assertEquals("Test Failed. ", expectedFullName, actualFullName);
 
