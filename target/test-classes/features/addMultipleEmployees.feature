@@ -17,7 +17,7 @@ Feature: Adding multiple employees
 
 
 # 2nd way: adding multiple users using Cucumber DataTable
-
+@dataTable
   Scenario: adding multiple employees
     When user enters employee's full name and clicks on save button
       | FirstName | MiddleName | LastName |
