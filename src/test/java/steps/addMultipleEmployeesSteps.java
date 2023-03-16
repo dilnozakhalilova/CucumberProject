@@ -50,11 +50,10 @@ public class addMultipleEmployeesSteps extends BaseClass {
             Assert.assertEquals("Test Failed. ", expectedFullName, actualFullName);
 
             // click add employee again
-            pimPage.addEmployee.click();
+            pimPage.addEmployee.click();  // Get rid of extra click
 
         }
     }
-
     @Then("new employee is added successfully")
     public void new_employee_is_added_successfully() {
         System.out.println("All users are added successfully using DataTable");
