@@ -1,6 +1,7 @@
 package steps;
 
 import base.BaseClass;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
@@ -24,6 +25,16 @@ public class addMultipleEmployeesSteps extends BaseClass {
         public void new_employee_is_added_successfully(String fullName) {
             Assert.assertEquals("Employee full name does NOT match. ", fullName, personalDetailsPage.employeeFullName.getText());
         }
+
+    @When("user enters employee's full name and clicks on save button")
+    public void user_enters_employee_s_full_name_and_clicks_on_save_button(DataTable dataTable) {
+
+
+    }
+    @Then("new employee is added successfully")
+    public void new_employee_is_added_successfully() {
+
+    }
 
 
 }
