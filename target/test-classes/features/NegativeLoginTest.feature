@@ -19,6 +19,5 @@ Feature: Login test (Negative)
     When I enter invalid username andOr password I will see an error message
       | Username | Password         | ErrorMessage             |
       | Admin    | invalidPass      | Invalid credentials      |
-      | Admin    |                  | Password cannot be empty |
       |          | Exelent2022Sdet! | Username cannot be empty |
-
+      | Admin    |                  | Password cannot be empty |

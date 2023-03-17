@@ -31,13 +31,18 @@ public class NegativeLoginTestSteps extends BaseClass {
             if (map.get("Username") != null) {
                 sendText(loginPage.username, map.get("Username"));
             }
-            if (map.get("Password") != null) {
+            if (map.get("Password") == null) {
+                loginPage.password.clear();
+            } else {
                 sendText(loginPage.password, map.get("Password"));
             }
             loginPage.loginBtn.click();
+            wait(1);
+            Assert.assertEquals("Login Error Message is incorrect:", map.get("ErrorMessage"), loginPage.loginErrorMessage.getText());
 
         }
 
 
     }
+
 }
