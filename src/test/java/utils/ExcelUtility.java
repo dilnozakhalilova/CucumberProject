@@ -6,6 +6,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 // we need to import Apache POI libraries for this to work
 public class ExcelUtility {
@@ -85,4 +89,12 @@ public class ExcelUtility {
 // Instead of inner loop we need to use map
     // create a method for maps version
 
-}
+    public static List<Map<String, String>> readFromExcel(){
+        List<Map<String, String>> mapList = new ArrayList<>();
+        Map<String, String> map = new LinkedHashMap<>();
+            mapList.add(map);
+            return mapList;
+        }
+    }
+
+
