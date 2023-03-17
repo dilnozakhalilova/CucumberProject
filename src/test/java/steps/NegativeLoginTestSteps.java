@@ -28,13 +28,16 @@ public class NegativeLoginTestSteps extends BaseClass {
     public void i_enter_invalid_username_and_or_password_i_will_see_an_error_message(DataTable dataTable) {
         List<Map<String, String>> mapList = dataTable.entries();
         for (Map<String, String> map : mapList) {
-            sendText(loginPage.username, map.get("Username"));
-            sendText(loginPage.password, map.get("Password"));
+            if (map.get("Username") != null) {
+                sendText(loginPage.username, map.get("Username"));
+            }
+            if (map.get("Password") != null) {
+                sendText(loginPage.password, map.get("Password"));
+            }
             loginPage.loginBtn.click();
+
         }
 
 
     }
-
-
 }
