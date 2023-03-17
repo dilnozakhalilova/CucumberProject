@@ -14,10 +14,11 @@ Feature: Login test (Negative)
       #|          | Exelent2022Sdet! | Username cannot be empty |
 
     #Then Invalid credentials error message is displayed
-@negative
+  @negative
   Scenario: Login with invalid credentials
     When I enter invalid username andOr password I will see an error message
       | Username | Password         | ErrorMessage             |
       | Admin    | invalidPass      | Invalid credentials      |
       |          | Exelent2022Sdet! | Username cannot be empty |
       | Admin    |                  | Password cannot be empty |
+      |          |                  | Username cannot be empty |

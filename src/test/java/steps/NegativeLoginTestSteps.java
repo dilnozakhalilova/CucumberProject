@@ -30,6 +30,8 @@ public class NegativeLoginTestSteps extends BaseClass {
         for (Map<String, String> map : mapList) {
             if (map.get("Username") != null) {
                 sendText(loginPage.username, map.get("Username"));
+            }else {
+                loginPage.username.clear();
             }
             if (map.get("Password") == null) {
                 loginPage.password.clear();
@@ -39,7 +41,7 @@ public class NegativeLoginTestSteps extends BaseClass {
             loginPage.loginBtn.click();
             wait(1);
             Assert.assertEquals("Login Error Message is incorrect:", map.get("ErrorMessage"), loginPage.loginErrorMessage.getText());
-
+            System.out.println("Negative Login Test Passed. Error Message '" + map.get("ErrorMessage") + " 'is displayed");
         }
 
 
