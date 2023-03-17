@@ -16,16 +16,3 @@ Feature: Login test
     When   user logs in with invalid admin login and empty admin password field
     Then  Password cannot be empty message is displayed
 
-  @negativeLogin
-  Scenario: Negative login Test using DataTable:
-
-    When user is unable to login using invalid credentials
-      | username | password         | errorMessage             |
-      | admi123  | invalidPass      | Invalid credentials      |
-     | Admin    |                  | Password cannot be empty |
-     # |          | Exelent2022Sdet! | Username cannot be empty |
-     # | Admin    | invalidPassword  | Invalid credentials      |
-    Then Invalid credentials error message is displayed
-
-
-

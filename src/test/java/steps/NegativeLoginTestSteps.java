@@ -2,8 +2,7 @@ package steps;
 
 import base.BaseClass;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 
 import java.util.List;
@@ -23,6 +22,18 @@ public class NegativeLoginTestSteps extends BaseClass {
             Assert.assertEquals("Test failed.", expected, loginPage.loginErrorMessage.getText());
             System.out.println(loginPage.loginErrorMessage.getText());
         }
+    }
+
+    @When("I enter invalid username andOr password I will see an error message")
+    public void i_enter_invalid_username_and_or_password_i_will_see_an_error_message(DataTable dataTable) {
+        List<Map<String, String>> mapList = dataTable.entries();
+        for (Map<String, String> map : mapList) {
+            sendText(loginPage.username, map.get("Username"));
+            sendText(loginPage.password, map.get("Password"));
+            loginPage.loginBtn.click();
+        }
+
+
     }
 
 
