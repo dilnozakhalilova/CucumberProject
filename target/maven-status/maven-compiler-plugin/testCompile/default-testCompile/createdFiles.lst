@@ -13,6 +13,7 @@ steps\Hooks.class
 base\PageInitializer.class
 pages\PersonalDetailsPage.class
 steps\LoginSteps.class
+runners\Listener.class
 runners\TestRunner.class
 runners\SmokeRunner.class
 steps\addMultipleEmployeesSteps.class
