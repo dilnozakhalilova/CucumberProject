@@ -1,9 +1,11 @@
 Feature: Adding multiple employees
   To perform Data Driven Testing in Cucumber we use Scenario Online
+Background:
+  Given user logs in with valid admin credentials
+  And user navigates to the add employee page
 
   Scenario Outline: Adding multiple employees
-    Given user logs in with valid admin credentials
-    And user navigates to the add employee page
+
     When user enters new employee's "<First Name>", "<Middle Name>", and "<Last Name>"
     And user clicks on the save button
     Then new employee "<Full Name>" is added successfully
@@ -19,8 +21,6 @@ Feature: Adding multiple employees
 # 2nd way: adding multiple users using Cucumber DataTable
 @dataTable
   Scenario: adding multiple employees
-  Given user logs in with valid admin credentials
-  And user navigates to the add employee page
     When user enters employee's full name and clicks on save button
       | FirstName | MiddleName | LastName |
       | Nicolas   | C.         | Cage     |
@@ -28,6 +28,21 @@ Feature: Adding multiple employees
       | Sam       | K.         | Peters   |
       | Mark      | B.         | Charles  |
   Then new employee is added successfully
+
+# 3rd way: from Excel
+  @excel
+Scenario: Adding multiple employees from Excel
+  When user enters employee data from "Employee" sheet
+  Then new employee is added successfully using Excel import
+
+
+
+
+
+
+
+
+
 
 
 
