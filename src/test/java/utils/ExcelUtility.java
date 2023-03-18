@@ -97,8 +97,9 @@ public class ExcelUtility {
 
         List<Map<String, String>> mapList = new ArrayList<>();
 
-        Map<String, String> map = new LinkedHashMap<>();
+        Map<String, String> map ;
         for (int i = 1; i <rowCount() ; i++) {
+            map = new LinkedHashMap<>();
 
             for (int j = 0; j <colCount() ; j++) {
                 map.put(getCell(0,j),getCell(i,j));

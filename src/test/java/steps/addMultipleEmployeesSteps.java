@@ -84,9 +84,10 @@ public class addMultipleEmployeesSteps extends BaseClass {
             System.out.println(actualFullName + " is successfully added using Excel import");
 
             // click addEmployee sub-menu again
-            if (!map.get("Firstname").equals(mapList.get(mapList.size() - 1).get("Firstname"))) {
+            System.out.println("map size"+mapList.size());
+           if (!map.get("Firstname").equals(mapList.get(mapList.size() - 1).get("Firstname"))) {
                 pimPage.navigateToAddEmployee();
-            }
+           }
         }
     }
 
