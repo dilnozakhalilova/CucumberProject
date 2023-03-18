@@ -5,10 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 public class DashboardPage extends BaseClass {
     @FindBy(id = "welcome")
     public WebElement welcome;      // <== public WebElement welcome = driver.findElement(By.id("welcome"));
+
+    @FindBy(css = "#mainMenu b")
+    public List<WebElement> mainMenu;  // be careful, no red line error if you make a mistake
+
 
 
     @FindBy(xpath = "//div[@id='branding']/a/img")
