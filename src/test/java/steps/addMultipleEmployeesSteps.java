@@ -4,6 +4,8 @@ import base.BaseClass;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import utils.Constants;
+import utils.ExcelUtility;
 
 import java.util.List;
 import java.util.Map;
@@ -54,9 +56,31 @@ public class addMultipleEmployeesSteps extends BaseClass {
 
         }
     }
+
     @Then("new employee is added successfully")
     public void new_employee_is_added_successfully() {
         System.out.println("All users are added successfully using DataTable");
+
+    }
+
+    @When("user enters employee data from {string} sheet")
+    public void user_enters_employee_data_from_sheet(String sheetName) {
+        List<Map<String, String>> mapList = ExcelUtility.readFromExcelMap(Constants.TESTDATA_FILEPATH, sheetName);// specifying path
+
+        for (Map<String, String> map : mapList) {
+            addEmployeePage.firstName.sendKeys(map.get("Firstname"));
+            addEmployeePage.lastName.sendKeys(map.get("Lastname"));
+//            addEmployeePage.CreateLoginDetailsCheckbox.click();
+//            addEmployeePage.userName.sendKeys("Username");
+//            addEmployeePage.password.sendKeys("Password");
+            addEmployeePage.saveBtn.click();
+        }
+
+
+    }
+
+    @Then("new employee is added successfully using Excel import")
+    public void new_employee_is_added_successfully_using_excel_import() {
 
     }
 

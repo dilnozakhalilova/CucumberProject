@@ -91,7 +91,7 @@ public class ExcelUtility {
 // Instead of inner loop we need to use map
     // create a method for maps version
 
-    public static List<Map<String, String>> readFromExcel2(String filePath, String sheetName){
+    public static List<Map<String, String>> readFromExcelMap(String filePath, String sheetName){
         getFilePath(filePath);
         getSheet(sheetName);
 
