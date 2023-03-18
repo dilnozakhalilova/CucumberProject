@@ -1,6 +1,7 @@
 package steps;
 
 import base.BaseClass;
+import com.sun.source.tree.AssertTree;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -74,13 +75,24 @@ public class addMultipleEmployeesSteps extends BaseClass {
 //            addEmployeePage.userName.sendKeys("Username");
 //            addEmployeePage.password.sendKeys("Password");
             addEmployeePage.saveBtn.click();
+
+            // Validation
+
+            String expectedFullName = map.get("Firstname") + " " + map.get("Lastname");
+            String actualFullName = personalDetailsPage.employeeFullName.getText();
+            Assert.assertEquals("Employee name does not match.", expectedFullName, actualFullName);
+            System.out.println(actualFullName + " is successfully added using Excel import");
+
+            // click addEmployee sub-menu again
+            if (!map.get("Firstname").equals(mapList.get(mapList.size() - 1).get("Firstname"))) {
+                pimPage.navigateToAddEmployee();
+            }
         }
-
-
     }
 
     @Then("new employee is added successfully using Excel import")
     public void new_employee_is_added_successfully_using_excel_import() {
+        System.out.println("All new employees are added");
 
     }
 
