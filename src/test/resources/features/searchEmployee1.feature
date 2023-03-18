@@ -1,3 +1,4 @@
+@regression
 Feature: Searching existing Employees
 
   Background:

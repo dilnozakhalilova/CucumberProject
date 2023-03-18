@@ -1,4 +1,4 @@
-@login2
+@login2 @regression
 
 Feature: login Test
 
