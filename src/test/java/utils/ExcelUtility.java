@@ -96,12 +96,10 @@ public class ExcelUtility {
         getSheet(sheetName);
 
         List<Map<String, String>> mapList = new ArrayList<>();
-
         Map<String, String> map ;
-        for (int i = 1; i <rowCount() ; i++) {
+        for (int i = 1; i <rowCount() ; i++) {  // rows
             map = new LinkedHashMap<>();
-
-            for (int j = 0; j <colCount() ; j++) {
+            for (int j = 0; j <colCount() ; j++) { // columns
                 map.put(getCell(0,j),getCell(i,j));
             }
             mapList.add(map);
