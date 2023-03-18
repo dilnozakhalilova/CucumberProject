@@ -18,7 +18,8 @@ import org.junit.runner.RunWith;
         , tags = "@excel"
         , plugin = {
         "pretty",
-        "html:target/cucumber-report/cucumberReport.html"
+        "html:target/cucumber-report/cucumberReport.html",
+        "json:target/cucumber-report/cucumberReport.json"
 }
 
 )
